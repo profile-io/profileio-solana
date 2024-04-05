@@ -17,7 +17,7 @@ use {
 declare_id!("D4fvsonBWc18gx5WxYNVroutFvjeG8hpnDjCVwBrPH6A");
 
 #[program]
-pub mod mint_nft {
+pub mod minter {
     use super::*;
 
     pub fn mint(
@@ -92,7 +92,7 @@ pub mod mint_nft {
         msg!("Creating metadata account...");
         msg!("Metadata account address: {}", &ctx.accounts.metadata.to_account_info().key());
         invoke(
-            &token_instruction::create_metadata_accounts_v2(
+            &token_instruction::create_metadata_accounts_v3(
                 TOKEN_METADATA_ID, 
                 ctx.accounts.metadata.key(), 
                 ctx.accounts.mint.key(), 
@@ -107,6 +107,7 @@ pub mod mint_nft {
                 true, 
                 false, 
                 None, 
+                None,
                 None,
             ),
             &[

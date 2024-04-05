@@ -1,0 +1,10 @@
+{
+    "name": "Profile.io Badge NFT",
+    "symbol": "PRFL",
+    "description": "Test NFT Badge",
+    "seller_fee_basis_points": 5,
+    "external_url": "",
+    "edition": "",
+    "background_color": "000000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPPn70C005CQMcjfvOOFPOWpmuyQBe43Lg4giCPT1wew&s"
+}
